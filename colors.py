@@ -1,4 +1,4 @@
-print('Colors Python Code Cheatsheet')
+import emoji
 
 # Reset
 Color_Off="\033[0m"       # Text Reset
@@ -73,82 +73,180 @@ On_IPurple="\033[10;95m"  # Purple
 On_ICyan="\033[0;106m"    # Cyan
 On_IWhite="\033[0;107m"   # White
 
+#def section
 
 
+def display_menu():
+    print('\nMain Menu:')
+    print("0 - Reset")
+    print('1 - Regular Colors | ie: ' + Yellow + ('Yellow') + Color_Off)
+    print("2 - Bold | ie: " + BYellow + ('Yellow') + Color_Off)
+    print("3 - Underline | ie: " + UYellow + ('Yellow') + Color_Off)
+    print("4 - Background | ie: " + On_Yellow + ('Yellow') + Color_Off)
+    print("5 - High Intensity | ie: " + IYellow + ('Yellow') + Color_Off)
+    print("6 - Bold High Intesity | ie: " + BIYellow + ('Yellow') + Color_Off)
+    print("7 - High Intensty Backgrounds | ie: " + On_IYellow + ('Yellow') + Color_Off)
+    print('8 - Exit')
+
+def regular():
+    print('\n' + On_Black + '1️⃣  Regular Colors' + Color_Off)
+    print(Black + 'Black')
+    print(Red + 'Red')
+    print(Green + 'Green')
+    print(Yellow +'Yellow')
+    print(Blue +'Blue')
+    print(Purple + 'Purple')
+    print(Cyan + 'Cyan')
+    print(White + 'White\n')
+
+def bold():
+    print(BBlack + 'BBlack')
+    print(BRed + 'BRed')
+    print(BGreen + 'BGreen')
+    print(BYellow + 'BYellow')
+    print(BBlue + 'BBlue')
+    print(BPurple + 'BPurple')
+    print(BCyan + 'BCyan')
+    print(BWhite + 'BWhite\n')
+
+def underline():
+    print(UBlack + 'UBlack')
+    print(URed + 'URed')
+    print(UGreen + 'UGreen')
+    print(UYellow + 'UYellow')
+    print(UBlue + 'UBlue')
+    print(UPurple + 'UPurple')
+    print(UCyan + 'UCyan')
+    print(UWhite + 'UWhite\n')
+
+def background():
+    print(On_Black + 'On_Black' + Color_Off)
+    print(On_Red + 'On_Red' + Color_Off)
+    print(On_Green + 'On_Green' + Color_Off)
+    print(On_Yellow + 'On_Yellow' + Color_Off)
+    print(On_Blue + 'On_Blue' + Color_Off)
+    print(On_Purple + 'On_Purple' + Color_Off)
+    print(On_Cyan + 'On_Cyan' + Color_Off)
+    print(On_White + 'On_White' + Color_Off + '\n')
+
+def high_intensity():
+    print(IBlack + 'IBlack')
+    print(IRed + 'IRed')
+    print(IGreen + 'IGreen')
+    print(IYellow + 'IYellow')
+    print(IBlue + 'IBlue')
+    print(IPurple + 'IPurple')
+    print(ICyan + 'ICyan')
+    print(IWhite + 'IWhite\n')
+
+def bold_high_intensity():
+    print(BIBlack + 'BIBlack')
+    print(BIRed + 'BIRed')
+    print(BIGreen + 'BIGreen')
+    print(BIYellow + 'BIYellow')
+    print(BIBlue + 'BIBlue')
+    print(BIPurple + 'BIPurple')
+    print(BICyan + 'BICyan')
+    print(BIWhite + 'BIWhite\n')
+
+def high_intensity_backgrounds():
+    print(On_IBlack + 'On_IBlack' + Color_Off)
+    print(On_IRed + 'On_IRed' + Color_Off)
+    print(On_IGreen + 'On_IGreen' + Color_Off)
+    print(On_IYellow + 'On_IYellow' + Color_Off)
+    print(On_IBlack + 'On_IBlue' + Color_Off)
+    print(On_IPurple + 'On_IPurple' + Color_Off)
+    print(On_ICyan + 'On_ICyan' + Color_Off)
+    print(On_IWhite + 'On_IWhite' + Color_Off)
 
 
+print(BYellow + '\nColors Python Codes Cheatsheet' + Color_Off)
+print('🔱 C o d e d   b y   0 d a y n e m e s i s 🇵🇹 🔱')
+print('\n🔴🟠🟡🟢🔵🟣🟤⚫⚪')
 
+#display menu
+while True:
+    display_menu()
+    option = input('Option: ')
 
+#options
 
-# Reset
-print('Color_Off = Reset Color')
+    if option == '1':
+        regular()
+        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
-# Regular Colors
-print(Black + 'Black')
-print('Red')
-print('Green')
-print('Yellow')
-print('Blue')
-print('Purple')
-print('Cyan')
-print('White')
+        if ret_menu == 'y':
+            print('Returning...')
+        
+        else:
+            print('Exiting...')
+            exit()
 
-print('# Bold')
-print('BBlack')
-print('BRed')
-print('BGreen')
-print('BYellow')
-print('BBlue')
-print('BPurple')
-print('BCyan')
-print('BWhite')
+    elif option == '2':
+        bold()
+        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
-print('# Underline')
-print('UBlack')
-print('URed')
-print('UGreen')
-print('UYellow')
-print('UBlue')
-print('UPurple')
-print('UCyan')
-print('UWhite')
+        if ret_menu == 'y':
+            print('Returning...')
+        
+        else:
+            print('Exiting...')
+            exit()
 
-print('# Background')
-print('On_Black')
-print('On_Red')
-print('On_Green')
-print('On_Yellow')
-print('On_Blue')
-print('On_Purple')
-print('On_Cyan')
-print('On_White')
+    elif option == '3':
+        underline()
+        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
-print('# High Intensty')
-print('IBlack')
-print('IRed')
-print('IGreen')
-print('IYellow')
-print('IBlue')
-print('IPurple')
-print('ICyan')
-print('IWhite')
+        if ret_menu == 'y':
+            print('Returning...')
+        else:
+            print('Exiting...')
+            exit()
 
-print('# Bold High Intensty')
-print('BIBlack')
-print('BIRed')
-print('BIGreen')
-print('BIYellow')
-print('BIBlue')
-print('BIPurple')
-print('BICyan')
-print('BIWhite')
+    elif option == '4':
+        background()
+        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
-print('# High Intensty backgrounds')
-print('On_IBlack')
-print('On_IRed')
-print('On_IGreen')
-print('On_IYellow')
-print('On_IBlue')
-print('On_IPurple')
-print('On_ICyan')
-print('On_IWhite')
+        if ret_menu == 'y':
+            print('Returning...')
+        
+        else:
+            print('Exiting...')
+            exit()
+    
+    elif option == '5':
+        high_intensity()
+        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
+
+        if ret_menu == 'y':
+            print('Returning...')
+        
+        else:
+            print('Exiting...')
+            exit()
+
+    elif option == '6':
+        bold_high_intensity()
+        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
+
+        if ret_menu == 'y':
+            print('Returning...')
+        
+        else:
+            print('Exiting...')
+            exit()
+    
+    elif option == '7':
+        high_intensity_backgrounds()
+        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
+
+        if ret_menu == 'y':
+            print('Returning...')
+        
+        else:
+            print('Exiting...')
+            exit()
+
+    elif option == '8':
+        print('\nExiting...')
+        exit()
