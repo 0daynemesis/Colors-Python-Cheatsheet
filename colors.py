@@ -1,4 +1,6 @@
 import emoji
+import os
+import time
 
 # Reset
 Color_Off="\033[0m"       # Text Reset
@@ -77,27 +79,33 @@ On_IWhite="\033[0;107m"   # White
 
 
 def display_menu():
+    print(BYellow + '\nColors Python Codes Cheatsheet' + Color_Off)
+    print('🔱 C o d e d   b y   0 d a y n e m e s i s 🇵🇹 🔱')
+    print('\n🔴🟠🟡🟢🔵🟣🟤⚫⚪')
     print('\nMain Menu:')
-    print("0 - Reset")
-    print('1 - Regular Colors | ie: ' + Yellow + ('Yellow') + Color_Off)
-    print("2 - Bold | ie: " + BYellow + ('Yellow') + Color_Off)
-    print("3 - Underline | ie: " + UYellow + ('Yellow') + Color_Off)
-    print("4 - Background | ie: " + On_Yellow + ('Yellow') + Color_Off)
-    print("5 - High Intensity | ie: " + IYellow + ('Yellow') + Color_Off)
-    print("6 - Bold High Intesity | ie: " + BIYellow + ('Yellow') + Color_Off)
-    print("7 - High Intensty Backgrounds | ie: " + On_IYellow + ('Yellow') + Color_Off)
-    print('8 - Exit')
+    print("0️⃣ - Reset")
+    print('1️⃣ - Regular Colors | ie: ' + Yellow + ('Yellow') + Color_Off)
+    print("2️⃣ - Bold | ie: " + BYellow + ('Yellow') + Color_Off)
+    print("3️⃣ - Underline | ie: " + UYellow + ('Yellow') + Color_Off)
+    print("4️⃣ - Background | ie: " + On_Yellow + ('Yellow') + Color_Off)
+    print("5️⃣ - High Intensity | ie: " + IYellow + ('Yellow') + Color_Off)
+    print("6️⃣ - Bold High Intesity | ie: " + BIYellow + ('Yellow') + Color_Off)
+    print("7️⃣ - High Intensty Backgrounds | ie: " + On_IYellow + ('Yellow') + Color_Off)
+    print('8️⃣ - Exit')
+
+def reset():
+    print('Color_Off')
 
 def regular():
-    print('\n' + On_Black + '1️⃣  Regular Colors' + Color_Off)
-    print(Black + 'Black')
-    print(Red + 'Red')
-    print(Green + 'Green')
-    print(Yellow +'Yellow')
-    print(Blue +'Blue')
-    print(Purple + 'Purple')
-    print(Cyan + 'Cyan')
-    print(White + 'White\n')
+    print('\n🔰Regular Colors\n' + Color_Off)
+    print(Black + '➡ Black')
+    print(Red + '➡ Red')
+    print(Green + '➡ Green')
+    print(Yellow +'➡ Yellow')
+    print(Blue +'➡ Blue')
+    print(Purple + '➡ Purple')
+    print(Cyan + '➡ Cyan')
+    print(White + '➡ White\n')
 
 def bold():
     print(BBlack + 'BBlack')
@@ -159,10 +167,7 @@ def high_intensity_backgrounds():
     print(On_ICyan + 'On_ICyan' + Color_Off)
     print(On_IWhite + 'On_IWhite' + Color_Off)
 
-
-print(BYellow + '\nColors Python Codes Cheatsheet' + Color_Off)
-print('🔱 C o d e d   b y   0 d a y n e m e s i s 🇵🇹 🔱')
-print('\n🔴🟠🟡🟢🔵🟣🟤⚫⚪')
+os.system('clear')
 
 #display menu
 while True:
@@ -171,77 +176,106 @@ while True:
 
 #options
 
+    if option == '0':
+        os.system('clear')
+        reset()
+        ret_menu = input(Color_Off + '🚪 Return Main Menu (y/n): ')
+
+        if ret_menu == 'y':
+            print('🔙 Returning...')
+            time.sleep(1)
+            os.system('clear')
+        
+        else:
+            print('Exiting...')
+            exit()
+
     if option == '1':
+        os.system('clear')
         regular()
         ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
         if ret_menu == 'y':
             print('Returning...')
+            os.system('clear')
         
         else:
             print('Exiting...')
             exit()
 
     elif option == '2':
+        os.system('clear')
         bold()
         ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
         if ret_menu == 'y':
             print('Returning...')
+            os.system('clear')
         
         else:
             print('Exiting...')
             exit()
 
     elif option == '3':
+        os.system('clear')
         underline()
         ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
         if ret_menu == 'y':
             print('Returning...')
+            os.system('clear')
+
         else:
             print('Exiting...')
             exit()
 
     elif option == '4':
+        os.system('clear')
         background()
         ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
         if ret_menu == 'y':
             print('Returning...')
+            os.system('clear')
         
         else:
             print('Exiting...')
             exit()
     
     elif option == '5':
+        os.system('clear')
         high_intensity()
         ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
         if ret_menu == 'y':
             print('Returning...')
+            os.system('clear')
         
         else:
             print('Exiting...')
             exit()
 
     elif option == '6':
+        os.system('clear')
         bold_high_intensity()
         ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
         if ret_menu == 'y':
             print('Returning...')
+            os.system('clear')
         
         else:
             print('Exiting...')
             exit()
     
     elif option == '7':
+        os.system('clear')
         high_intensity_backgrounds()
         ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
 
         if ret_menu == 'y':
             print('Returning...')
+            os.system('clear')
         
         else:
             print('Exiting...')
