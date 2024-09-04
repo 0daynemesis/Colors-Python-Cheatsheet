@@ -128,47 +128,41 @@ def reset():
 
 def regular():
 
-    data = [[Black + "⚫ ➡ Black", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"],
-            ["Color_Off", "033[0m]"]
-        ]
+    print('\n🔰Regular Colors\n' + Color_Off)
+    data = [[Black + "⚫ ➡ Black", "033[0;37m"],
+            [Red + '🔴 ➡ Red', "033[0;31m"],
+            [Green + "🟢 ➡ Green", "033[0;32m"],
+            [Yellow + "🟡 ➡ Yellow", "033[0;33m"],
+            [Blue + "🔵 ➡ Blue", "033[0;34m"],
+            [Purple + "🟣 ➡ Purple", "033[0;35m"],
+            [Cyan + "🔵 ➡ Cyan", "033[0;36m"],
+            [White + "⚪ ➡ White", "033[0;37m" + Color_Off]
+    ]
+    
 
     col_names = ["Color", "Code"]
 
     print(tabulate(data, headers=col_names))
-
-
-    print('\n🔰Regular Colors\n' + Color_Off)
-    print(Black + '⚫ ➡ Black' + Color_Off + '  033[0;37m')
-    print(Red + '🔴 ➡ Red' + Color_Off + '  033[0;31m')
-    print(Green + '🟢 ➡ Green' + Color_Off + '  033[0;32m')
-    print(Yellow +'🟡 ➡ Yellow' + Color_Off + '  033[0;33m')
-    print(Blue +'🔵 ➡ Blue' + Color_Off + '  033[0;34m')
-    print(Purple + '🟣 ➡ Purple' + Color_Off + '  033[0;35m')
-    print(Cyan + '🔵 ➡ Cyan' + Color_Off + '  033[0;36m')
-    print(White + '⚪ ➡ White' + Color_Off + '  033[0;37m')
-    print('Append always a \ before 033\n')
+    print('\n Note: Append always a \ before 033\n')
 
 def bold():
+
     print('\n🔰Bold\n' + Color_Off)
-    print(BBlack + '⚫ ➡ BBlack' + Color_Off + '  033[1;30m')
-    print(BRed + '🔴 ➡ BRed' + Color_Off + '  033[1;31m')
-    print(BGreen + '🟢 ➡ BGreen' + Color_Off + '  033[1;32m')
-    print(BYellow + '🟡 ➡ BYellow' + Color_Off + '  033[1;33m ')
-    print(BBlue + '🔵 ➡ BBlue' + Color_Off + '  033[1;34m ')
-    print(BPurple + '🟣 ➡ BPurple' + Color_Off + '  033[1;35m ')
-    print(BCyan + '🔵 ➡ BCyan' + Color_Off + '  033[1;36m ')
-    print(BWhite + '⚪ ➡ BWhite' + Color_Off + '  033[1;37m ')
-    print('Append always a \ before 033\n')
+    data = [[Black + "⚫ ➡ Black", "033[1;30m"],
+            [Red + '🔴 ➡ Red', "033[1;31m"],
+            [Green + "🟢 ➡ Green", "033[1;32m"],
+            [Yellow + "🟡 ➡ Yellow", "033[1;33m"],
+            [Blue + "🔵 ➡ Blue", "033[1;34m"],
+            [Purple + "🟣 ➡ Purple", "033[1;35m"],
+            [Cyan + "🔵 ➡ Cyan", "033[1;36m"],
+            [White + "⚪ ➡ White", "033[1;37m" + Color_Off]
+    ]
+    
+
+    col_names = ["Color", "Code"]
+
+    print(tabulate(data, headers=col_names))
+    print('\n Note: Append always a \ before 033\n')
 
 def underline():
     print('\n🔰Underline\n' + Color_Off)
