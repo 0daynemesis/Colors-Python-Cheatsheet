@@ -1,8 +1,10 @@
 import emoji
-import tabulate
+from tabulate import tabulate
 import pyperclip
 import os
 import time
+
+
 
 # Reset
 Color_Off="\033[0m"       # Text Reset
@@ -77,7 +79,18 @@ On_IPurple="\033[10;95m"  # Purple
 On_ICyan="\033[0;106m"    # Cyan
 On_IWhite="\033[0;107m"   # White
 
+
+#table data
+
+#colors_all = [[]
+#              ["Black", "033[0;30m"]
+ #             ]
+
+
 #def section
+
+
+
 
 
 def display_menu():
@@ -114,6 +127,26 @@ def reset():
     print('Append always a \ before 033\n')
 
 def regular():
+
+    data = [[Black + "⚫ ➡ Black", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"],
+            ["Color_Off", "033[0m]"]
+        ]
+
+    col_names = ["Color", "Code"]
+
+    print(tabulate(data, headers=col_names))
+
+
     print('\n🔰Regular Colors\n' + Color_Off)
     print(Black + '⚫ ➡ Black' + Color_Off + '  033[0;37m')
     print(Red + '🔴 ➡ Red' + Color_Off + '  033[0;31m')
