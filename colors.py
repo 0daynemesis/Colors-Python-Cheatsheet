@@ -93,49 +93,66 @@ def display_menu():
     print("7️⃣ - High Intensty Backgrounds | ie: " + On_IYellow + ('Yellow') + Color_Off)
     print('8️⃣ - Exit')
 
+def ret_menu():
+    ret_menu = input(Color_Off + '🚪 Return Main Menu (y/n): ')
+
+    if ret_menu == 'y':
+        print('🔙 Returning...')
+        time.sleep(1)
+        os.system('clear')
+        
+    else:
+        print('❌ Exiting...')
+        time.sleep(1)
+        os.system('clear')
+        exit()
+
 def reset():
     print('Color_Off')
 
 def regular():
     print('\n🔰Regular Colors\n' + Color_Off)
-    print(Black + '➡ Black')
-    print(Red + '➡ Red')
-    print(Green + '➡ Green')
-    print(Yellow +'➡ Yellow')
-    print(Blue +'➡ Blue')
-    print(Purple + '➡ Purple')
-    print(Cyan + '➡ Cyan')
-    print(White + '➡ White\n')
+    print(Black + '⚫ ➡ Black')
+    print(Red + '🔴 ➡ Red')
+    print(Green + '🟢 ➡ Green')
+    print(Yellow +'🟡 ➡ Yellow')
+    print(Blue +'🔵 ➡ Blue')
+    print(Purple + '🟣 ➡ Purple')
+    print(Cyan + '🔵 ➡ Cyan')
+    print(White + '⚪ ➡ White\n')
 
 def bold():
-    print(BBlack + 'BBlack')
-    print(BRed + 'BRed')
-    print(BGreen + 'BGreen')
-    print(BYellow + 'BYellow')
-    print(BBlue + 'BBlue')
-    print(BPurple + 'BPurple')
-    print(BCyan + 'BCyan')
-    print(BWhite + 'BWhite\n')
+    print('\n🔰Bold\n' + Color_Off)
+    print(BBlack + '⚫ ➡ BBlack')
+    print(BRed + '🔴 ➡ BRed')
+    print(BGreen + '🟢 ➡ BGreen')
+    print(BYellow + '🟡 ➡ BYellow')
+    print(BBlue + '🔵 ➡ BBlue')
+    print(BPurple + '🟣 ➡ BPurple')
+    print(BCyan + '🔵 ➡ BCyan')
+    print(BWhite + '⚪ ➡ BWhite\n')
 
 def underline():
-    print(UBlack + 'UBlack')
-    print(URed + 'URed')
-    print(UGreen + 'UGreen')
-    print(UYellow + 'UYellow')
-    print(UBlue + 'UBlue')
-    print(UPurple + 'UPurple')
-    print(UCyan + 'UCyan')
-    print(UWhite + 'UWhite\n')
+    print('\n🔰Underline\n' + Color_Off)
+    print(UBlack + '⚫ ➡ UBlack')
+    print(URed + '🔴 ➡ URed')
+    print(UGreen + '🟢 ➡ UGreen')
+    print(UYellow + '🟡 ➡ UYellow')
+    print(UBlue + '🔵 ➡ UBlue')
+    print(UPurple + '🟣 ➡ UPurple')
+    print(UCyan + '🔵 ➡ UCyan')
+    print(UWhite + '⚪ ➡ UWhite\n')
 
 def background():
-    print(On_Black + 'On_Black' + Color_Off)
-    print(On_Red + 'On_Red' + Color_Off)
-    print(On_Green + 'On_Green' + Color_Off)
-    print(On_Yellow + 'On_Yellow' + Color_Off)
-    print(On_Blue + 'On_Blue' + Color_Off)
-    print(On_Purple + 'On_Purple' + Color_Off)
-    print(On_Cyan + 'On_Cyan' + Color_Off)
-    print(On_White + 'On_White' + Color_Off + '\n')
+    print('\Background\n' + Color_Off)
+    print(On_Black + '⚫ ➡ On_Black' + Color_Off)
+    print(On_Red + '🔴 ➡ On_Red' + Color_Off)
+    print(On_Green + '🟢 ➡ On_Green' + Color_Off)
+    print(On_Yellow + '🟡 ➡ On_Yellow' + Color_Off)
+    print(On_Blue + '🔵 ➡ On_Blue' + Color_Off)
+    print(On_Purple + '🟣 ➡ On_Purple' + Color_Off)
+    print(On_Cyan + '🔵 ➡ On_Cyan' + Color_Off)
+    print(On_White + '⚪ ➡ On_White' + Color_Off + '\n')
 
 def high_intensity():
     print(IBlack + 'IBlack')
@@ -179,108 +196,45 @@ while True:
     if option == '0':
         os.system('clear')
         reset()
-        ret_menu = input(Color_Off + '🚪 Return Main Menu (y/n): ')
+        ret_menu()
 
-        if ret_menu == 'y':
-            print('🔙 Returning...')
-            time.sleep(1)
-            os.system('clear')
-        
-        else:
-            print('Exiting...')
-            exit()
-
-    if option == '1':
+    elif option == '1':
         os.system('clear')
         regular()
-        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
-
-        if ret_menu == 'y':
-            print('Returning...')
-            os.system('clear')
-        
-        else:
-            print('Exiting...')
-            exit()
+        ret_menu()
 
     elif option == '2':
         os.system('clear')
         bold()
-        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
-
-        if ret_menu == 'y':
-            print('Returning...')
-            os.system('clear')
-        
-        else:
-            print('Exiting...')
-            exit()
+        ret_menu()
 
     elif option == '3':
         os.system('clear')
         underline()
-        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
-
-        if ret_menu == 'y':
-            print('Returning...')
-            os.system('clear')
-
-        else:
-            print('Exiting...')
-            exit()
+        ret_menu()
 
     elif option == '4':
         os.system('clear')
         background()
-        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
-
-        if ret_menu == 'y':
-            print('Returning...')
-            os.system('clear')
-        
-        else:
-            print('Exiting...')
-            exit()
+        ret_menu()
     
     elif option == '5':
         os.system('clear')
         high_intensity()
-        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
-
-        if ret_menu == 'y':
-            print('Returning...')
-            os.system('clear')
-        
-        else:
-            print('Exiting...')
-            exit()
+        ret_menu()
 
     elif option == '6':
         os.system('clear')
         bold_high_intensity()
-        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
-
-        if ret_menu == 'y':
-            print('Returning...')
-            os.system('clear')
-        
-        else:
-            print('Exiting...')
-            exit()
+        ret_menu()
     
     elif option == '7':
         os.system('clear')
         high_intensity_backgrounds()
-        ret_menu = input(Color_Off + 'Return Main Menu (y/n): ')
-
-        if ret_menu == 'y':
-            print('Returning...')
-            os.system('clear')
-        
-        else:
-            print('Exiting...')
-            exit()
+        ret_menu()
 
     elif option == '8':
-        print('\nExiting...')
+        print('\n❌ Exiting...')
+        time.sleep(1)
+        os.system('clear')
         exit()
