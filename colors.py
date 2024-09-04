@@ -1,4 +1,6 @@
 import emoji
+import tabulate
+import pyperclip
 import os
 import time
 
@@ -108,7 +110,8 @@ def ret_menu():
         exit()
 
 def reset():
-    print('Color_Off')
+    print('Color_Off' + '033[0m')
+    print('Append always a \ before 033\n')
 
 def regular():
     print('\n🔰Regular Colors\n' + Color_Off)
