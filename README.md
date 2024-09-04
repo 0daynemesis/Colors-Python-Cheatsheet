@@ -1,10 +1,12 @@
 # Colors Python Code Cheatsheet
 
 - Installation
-        . pip3 install -r requirements.txt
+       
+	 . pip3 install -r requirements.txt
 
 - Usage
-        . python3 colors.py
+        
+	. python3 colors.py
 
 
 - Documentation
