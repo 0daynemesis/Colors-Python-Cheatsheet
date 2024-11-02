@@ -389,14 +389,14 @@ def underline():
 def background():
 
     print('\n🔰Background\n' + Color_Off)
-    data = [[Black + "⚫ ➡ Black", "033[40m"],
-            [Red + '🔴 ➡ Red', "033[41m"],
-            [Green + "🟢 ➡ Green", "033[42m"],
-            [Yellow + "🟡 ➡ Yellow", "033[43m"],
-            [Blue + "🔵 ➡ Blue", "033[44m"],
-            [Purple + "🟣 ➡ Purple", "033[45m"],
-            [Cyan + "🔵 ➡ Cyan", "033[46m"],
-            [White + "⚪ ➡ White", "033[47m" + Color_Off]
+    data = [[Black + "⚫ ➡ Black", "\\033[40m"],
+            [Red + '🔴 ➡ Red', "\\033[41m"],
+            [Green + "🟢 ➡ Green", "\\033[42m"],
+            [Yellow + "🟡 ➡ Yellow", "\\033[43m"],
+            [Blue + "🔵 ➡ Blue", "\\033[44m"],
+            [Purple + "🟣 ➡ Purple", "\\033[45m"],
+            [Cyan + "🔵 ➡ Cyan", "\\033[46m"],
+            [White + "⚪ ➡ White", "\\033[47m" + Color_Off]
     ]
     
 
@@ -463,14 +463,14 @@ def background():
 def high_intensity():
 
     print('\n🔰High Intensity\n' + Color_Off)
-    data = [[Black + "⚫ ➡ Black", "033[0;90m"],
-            [Red + '🔴 ➡ Red', "033[0;91m"],
-            [Green + "🟢 ➡ Green", "033[0;92m"],
-            [Yellow + "🟡 ➡ Yellow", "033[0;93m"],
-            [Blue + "🔵 ➡ Blue", "033[0;94m"],
-            [Purple + "🟣 ➡ Purple", "033[0;95m"],
-            [Cyan + "🔵 ➡ Cyan", "033[0;96m"],
-            [White + "⚪ ➡ White", "033[0;97m" + Color_Off]
+    data = [[Black + "⚫ ➡ Black", "\\033[0;90m"],
+            [Red + '🔴 ➡ Red', "\\033[0;91m"],
+            [Green + "🟢 ➡ Green", "\\033[0;92m"],
+            [Yellow + "🟡 ➡ Yellow", "\\033[0;93m"],
+            [Blue + "🔵 ➡ Blue", "\\033[0;94m"],
+            [Purple + "🟣 ➡ Purple", "\\033[0;95m"],
+            [Cyan + "🔵 ➡ Cyan", "\\033[0;96m"],
+            [White + "⚪ ➡ White", "\\033[0;97m" + Color_Off]
     ]
     
 
@@ -537,14 +537,14 @@ def high_intensity():
 def bold_high_intensity():
 
     print('\n🔰Bold High Intensity\n' + Color_Off)
-    data = [[Black + "⚫ ➡ Black", "033[1;90m"],
-            [Red + '🔴 ➡ Red', "033[1;91m"],
-            [Green + "🟢 ➡ Green", "033[1;92m"],
-            [Yellow + "🟡 ➡ Yellow", "033[1;93m"],
-            [Blue + "🔵 ➡ Blue", "033[1;94m"],
-            [Purple + "🟣 ➡ Purple", "033[1;95m"],
-            [Cyan + "🔵 ➡ Cyan", "033[1;96m"],
-            [White + "⚪ ➡ White", "033[1;97m" + Color_Off]
+    data = [[Black + "⚫ ➡ Black", "\\033[1;90m"],
+            [Red + '🔴 ➡ Red', "\\033[1;91m"],
+            [Green + "🟢 ➡ Green", "\\033[1;92m"],
+            [Yellow + "🟡 ➡ Yellow", "\\033[1;93m"],
+            [Blue + "🔵 ➡ Blue", "\\033[1;94m"],
+            [Purple + "🟣 ➡ Purple", "\\033[1;95m"],
+            [Cyan + "🔵 ➡ Cyan", "\\033[1;96m"],
+            [White + "⚪ ➡ White", "\\033[1;97m" + Color_Off]
     ]
     
 
@@ -611,14 +611,14 @@ def bold_high_intensity():
 def high_intensity_backgrounds():
 
     print('\n🔰High Intensity Backgrounds\n' + Color_Off)
-    data = [[Black + "⚫ ➡ Black", "033[0;100m"],
-            [Red + '🔴 ➡ Red', "033[0;101m"],
-            [Green + "🟢 ➡ Green", "033[0;102m"],
-            [Yellow + "🟡 ➡ Yellow", "033[0;103m"],
-            [Blue + "🔵 ➡ Blue", "033[0;104m"],
-            [Purple + "🟣 ➡ Purple", "033[10;95m"],
-            [Cyan + "🔵 ➡ Cyan", "033[0;106m"],
-            [White + "⚪ ➡ White", "033[0;107m" + Color_Off]
+    data = [[Black + "⚫ ➡ Black", "\\033[0;100m"],
+            [Red + '🔴 ➡ Red', "\\033[0;101m"],
+            [Green + "🟢 ➡ Green", "\\033[0;102m"],
+            [Yellow + "🟡 ➡ Yellow", "\\033[0;103m"],
+            [Blue + "🔵 ➡ Blue", "\\033[0;104m"],
+            [Purple + "🟣 ➡ Purple", "\\033[0;105m"],
+            [Cyan + "🔵 ➡ Cyan", "\\033[0;106m"],
+            [White + "⚪ ➡ White", "\\033[0;107m" + Color_Off]
     ]
     
 
@@ -713,28 +713,38 @@ while True:
 
     elif option == '3':
         os.system('clear')
-        underline()
-        ret_menu()
+        while True:
+            underline()
+            os.system('clear')
+            break
 
     elif option == '4':
         os.system('clear')
-        background()
-        ret_menu()
+        while True:
+            background()
+            os.system('clear')
+            break
     
     elif option == '5':
         os.system('clear')
-        high_intensity()
-        ret_menu()
+        while True:
+            high_intensity()
+            os.system('clear')
+            break
 
     elif option == '6':
         os.system('clear')
-        bold_high_intensity()
-        ret_menu()
+        while True:
+            bold_high_intensity()
+            os.system('clear')
+            break
     
     elif option == '7':
         os.system('clear')
-        high_intensity_backgrounds()
-        ret_menu()
+        while True:
+            high_intensity_backgrounds()
+            os.system('clear')
+            break
 
     elif option == '8':
         print('\n❌ Exiting...')
