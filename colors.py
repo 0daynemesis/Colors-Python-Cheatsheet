@@ -1,4 +1,3 @@
-import emoji
 from tabulate import tabulate
 import pyperclip
 import os
@@ -151,13 +150,20 @@ def ret_menu():
 
 def reset():
     print('\n🔰Reset\n' + Color_Off)
-    data = [["Color_Off", "033[0m"]]
+    data = [["Color_Off", "\\033[0m"]]
     
 
     col_names = ["Color", "Code"]
 
     print(tabulate(data, headers=col_names))
-    print('\n Note: Append always a \ before 033\n')
+    reset_color = input('\nCopy to clipboard? (y/n) ')
+    
+    if reset_color == 'y':
+        pyperclip.copy('\\033[0m')
+    elif reset_color == 'n':
+        os.system('clear')
+
+
 
 def regular():
 
@@ -197,7 +203,7 @@ def regular():
         elif color_regular == ('cyan'):
             pyperclip.copy('\\033[0;36m')
         elif color_regular == ('white'):
-            pyperclip.copy('White = \\033[0;37m')
+            pyperclip.copy('\\033[0;37m')
             print('Color White copied to clipboard', end='') 
             dots_progress(3)
         else:
@@ -235,40 +241,148 @@ def regular():
 def bold():
 
     print('\n🔰Bold\n' + Color_Off)
-    data = [[Black + "⚫ ➡ Black", "033[1;30m"],
-            [Red + '🔴 ➡ Red', "033[1;31m"],
-            [Green + "🟢 ➡ Green", "033[1;32m"],
-            [Yellow + "🟡 ➡ Yellow", "033[1;33m"],
-            [Blue + "🔵 ➡ Blue", "033[1;34m"],
-            [Purple + "🟣 ➡ Purple", "033[1;35m"],
-            [Cyan + "🔵 ➡ Cyan", "033[1;36m"],
-            [White + "⚪ ➡ White", "033[1;37m" + Color_Off]
+    data = [[Black + "⚫ ➡ Black", "\\033[1;30m"],
+            [Red + '🔴 ➡ Red', "\\033[1;31m"],
+            [Green + "🟢 ➡ Green", "\\033[1;32m"],
+            [Yellow + "🟡 ➡ Yellow", "\\033[1;33m"],
+            [Blue + "🔵 ➡ Blue", "\\033[1;34m"],
+            [Purple + "🟣 ➡ Purple", "\\033[1;35m"],
+            [Cyan + "🔵 ➡ Cyan", "\\033[1;36m"],
+            [White + "⚪ ➡ White", "\\033[1;37m" + Color_Off]
     ]
     
 
     col_names = ["Color", "Code"]
 
     print(tabulate(data, headers=col_names))
-    print('\n Note: Append always a \ before 033\n')
+
+    print('Time to color your python code!')
+    block()
+    block_option = input('\nOption: ')
+
+    if block_option == '1':
+        color_bold = input('Choose color (lower case): ')
+        if color_bold == 'black':     
+            pyperclip.copy('\\033[1;30m')
+        elif color_bold == 'red':
+            pyperclip.copy('\\033[1;31m')
+        elif color_bold == ('green'):
+            pyperclip.copy('\\033[1;32m')
+        elif color_bold == ('yellow'):
+            pyperclip.copy('\\033[1;33m')
+        elif color_bold == ('blue'):
+            pyperclip.copy('\\033[1;34m')
+        elif color_bold == ('purple'):
+            pyperclip.copy('\\033[1;35m')
+        elif color_bold == ('cyan'):
+            pyperclip.copy('\\033[1;36m')
+        elif color_bold == ('white'):
+            pyperclip.copy('\\033[1;37m')
+            print('Color White copied to clipboard', end='') 
+            dots_progress(3)
+        else:
+            os.system('clear')
+            print('Has to be a color | ie: black')
+            spinning_cursor(3)
+            os.system('clear')
+            return bold()
+            
+    elif block_option == '2':
+        print('Copying all colors...')
+        pyperclip.copy('Black = \\033[1;37m\nRed = \\033[1;31m\nGreen = \\033[1;32m\nYellow = \\033[1;33m\nBlue = \\033[1;34m\nPurple = \\033[1;35m\nCyan = \\033[1;36m\nWhite = \\033[1;37m')
+        loading_bar(100)
+        print('Copy finished, paste wherever you want and color the world!!')
+        time.sleep(5)
+        os.system('clear')
+
+    elif block_option == '3':
+        os.system('clear')     
+        
+        
+    elif block_option == '4':
+        print('\n❌ Exiting...')
+        time.sleep(1)
+        os.system('clear')
+        exit()
+    
+    else:
+        os.system('clear')
+        print('Invalid option, returning to Bold Colors Menu')
+        spinning_cursor(3)
+        os.system('clear')
 
 def underline():
 
     print('\n🔰Underline\n' + Color_Off)
-    data = [[Black + "⚫ ➡ Black", "033[4;30m"],
-            [Red + '🔴 ➡ Red', "033[4;31m"],
-            [Green + "🟢 ➡ Green", "033[4;32m"],
-            [Yellow + "🟡 ➡ Yellow", "033[4;33m"],
-            [Blue + "🔵 ➡ Blue", "033[4;34m"],
-            [Purple + "🟣 ➡ Purple", "033[4;35m"],
-            [Cyan + "🔵 ➡ Cyan", "033[4;36m"],
-            [White + "⚪ ➡ White", "033[4;37m" + Color_Off]
+    data = [[Black + "⚫ ➡ Black", "\\033[4;30m"],
+            [Red + '🔴 ➡ Red', "\\033[4;31m"],
+            [Green + "🟢 ➡ Green", "\\033[4;32m"],
+            [Yellow + "🟡 ➡ Yellow", "\\033[4;33m"],
+            [Blue + "🔵 ➡ Blue", "\\033[4;34m"],
+            [Purple + "🟣 ➡ Purple", "\\033[4;35m"],
+            [Cyan + "🔵 ➡ Cyan", "\\033[4;36m"],
+            [White + "⚪ ➡ White", "\\033[4;37m" + Color_Off]
     ]
     
 
     col_names = ["Color", "Code"]
 
     print(tabulate(data, headers=col_names))
-    print('\n Note: Append always a \ before 033\n')
+
+    print('Time to color your python code!')
+    block()
+    block_option = input('\nOption: ')
+
+    if block_option == '1':
+        color_underline = input('Choose color (lower case): ')
+        if color_underline == 'black':     
+            pyperclip.copy('\\033[4;37m')
+        elif color_underline == 'red':
+            pyperclip.copy('\\033[4;31m')
+        elif color_underline == ('green'):
+            pyperclip.copy('\\033[4;32m')
+        elif color_underline == ('yellow'):
+            pyperclip.copy('\\033[4;33m')
+        elif color_underline == ('blue'):
+            pyperclip.copy('\\033[4;34m')
+        elif color_underline == ('purple'):
+            pyperclip.copy('\\033[4;35m')
+        elif color_underline == ('cyan'):
+            pyperclip.copy('\\033[4;36m')
+        elif color_underline == ('white'):
+            pyperclip.copy('\\033[4;37m')
+            print('Color White copied to clipboard', end='') 
+            dots_progress(3)
+        else:
+            os.system('clear')
+            print('Has to be a color | ie: black')
+            spinning_cursor(3)
+            os.system('clear')
+            return underline()
+            
+    elif block_option == '2':
+        print('Copying all colors...')
+        pyperclip.copy('Black = \\033[4;37m\nRed = \\033[4;31m\nGreen = \\033[4;32m\nYellow = \\033[4;33m\nBlue = \\033[4;34m\nPurple = \\033[4;35m\nCyan = \\033[4;36m\nWhite = \\033[4;37m')
+        loading_bar(100)
+        print('Copy finished, paste wherever you want and color the world!!')
+        time.sleep(5)
+        os.system('clear')
+
+    elif block_option == '3':
+        os.system('clear')     
+        
+        
+    elif block_option == '4':
+        print('\n❌ Exiting...')
+        time.sleep(1)
+        os.system('clear')
+        exit()
+    
+    else:
+        os.system('clear')
+        print('Invalid option, returning to Underline Colors Menu')
+        spinning_cursor(3)
+        os.system('clear')
 
 
 def background():
@@ -375,8 +489,11 @@ while True:
         #ret_menu()
     elif option == '2':
         os.system('clear')
-        bold()
-        ret_menu()
+        while True:
+            bold()
+            os.system('clear')
+            break
+        
 
     elif option == '3':
         os.system('clear')
