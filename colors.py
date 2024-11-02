@@ -311,6 +311,7 @@ def bold():
         spinning_cursor(3)
         os.system('clear')
 
+
 def underline():
 
     print('\n🔰Underline\n' + Color_Off)
@@ -532,6 +533,7 @@ def high_intensity():
         spinning_cursor(3)
         os.system('clear')
 
+
 def bold_high_intensity():
 
     print('\n🔰Bold High Intensity\n' + Color_Off)
@@ -549,13 +551,67 @@ def bold_high_intensity():
     col_names = ["Color", "Code"]
 
     print(tabulate(data, headers=col_names))
-    print('\n Note: Append always a \ before 033\n')
+    
+    print('Time to color your python code!')
+    block()
+    block_option = input('\nOption: ')
+
+    if block_option == '1':
+        color_bold_high_intensity = input('Choose color (lower case): ')
+        if color_bold_high_intensity == 'black':     
+            pyperclip.copy('\\033[1;90m')
+        elif color_bold_high_intensity == 'red':
+            pyperclip.copy('\\033[1;91m')
+        elif color_bold_high_intensity == ('green'):
+            pyperclip.copy('\\033[1;92m')
+        elif color_bold_high_intensity == ('yellow'):
+            pyperclip.copy('\\033[1;93m')
+        elif color_bold_high_intensity == ('blue'):
+            pyperclip.copy('\\033[1;94m')
+        elif color_bold_high_intensity == ('purple'):
+            pyperclip.copy('\\033[1;95m')
+        elif color_bold_high_intensity == ('cyan'):
+            pyperclip.copy('\\033[1;96m')
+        elif color_bold_high_intensity == ('white'):
+            pyperclip.copy('\\033[1;97m')
+            print('Color White copied to clipboard', end='') 
+            dots_progress(3)
+        else:
+            os.system('clear')
+            print('Has to be a color | ie: black')
+            spinning_cursor(3)
+            os.system('clear')
+            return regular()
+            
+    elif block_option == '2':
+        print('Copying all colors...')
+        pyperclip.copy('Black = \\033[1;90m\nRed = \\033[1;91m\nGreen = \\033[1;92m\nYellow = \\033[1;93m\nBlue = \\033[1;94m\nPurple = \\033[1;95m\nCyan = \\033[1;96m\nWhite = \\033[1;97m')
+        loading_bar(100)
+        print('Copy finished, paste wherever you want and color the world!!')
+        time.sleep(5)
+        os.system('clear')
+
+    elif block_option == '3':
+        os.system('clear')     
+        
+        
+    elif block_option == '4':
+        print('\n❌ Exiting...')
+        time.sleep(1)
+        os.system('clear')
+        exit()
+    
+    else:
+        os.system('clear')
+        print('Invalid option, returning to Bold High Intensity Colors Menu')
+        spinning_cursor(3)
+        os.system('clear')
 
 
 def high_intensity_backgrounds():
 
     print('\n🔰High Intensity Backgrounds\n' + Color_Off)
-    data = [[Black + "⚫ ➡ Black", "033[0;10m"],
+    data = [[Black + "⚫ ➡ Black", "033[0;100m"],
             [Red + '🔴 ➡ Red', "033[0;101m"],
             [Green + "🟢 ➡ Green", "033[0;102m"],
             [Yellow + "🟡 ➡ Yellow", "033[0;103m"],
@@ -569,8 +625,61 @@ def high_intensity_backgrounds():
     col_names = ["Color", "Code"]
 
     print(tabulate(data, headers=col_names))
-    print('\n Note: Append always a \ before 033\n')
+        
+    print('Time to color your python code!')
+    block()
+    block_option = input('\nOption: ')
 
+    if block_option == '1':
+        color_high_intensity_backgrounds = input('Choose color (lower case): ')
+        if color_high_intensity_backgrounds == 'black':     
+            pyperclip.copy('\\033[0;100m')
+        elif color_high_intensity_backgrounds == 'red':
+            pyperclip.copy('\\033[0;101m')
+        elif color_high_intensity_backgrounds == ('green'):
+            pyperclip.copy('\\033[0;102m')
+        elif color_high_intensity_backgrounds == ('yellow'):
+            pyperclip.copy('\\033[0;103m')
+        elif color_high_intensity_backgrounds == ('blue'):
+            pyperclip.copy('\\033[0;104m')
+        elif color_high_intensity_backgrounds == ('purple'):
+            pyperclip.copy('\\033[0;105m')
+        elif color_high_intensity_backgrounds == ('cyan'):
+            pyperclip.copy('\\033[0;106m')
+        elif color_high_intensity_backgrounds == ('white'):
+            pyperclip.copy('\\033[0;107m')
+            print('Color White copied to clipboard', end='') 
+            dots_progress(3)
+        else:
+            os.system('clear')
+            print('Has to be a color | ie: black')
+            spinning_cursor(3)
+            os.system('clear')
+            return regular()
+            
+    elif block_option == '2':
+        print('Copying all colors...')
+        pyperclip.copy('Black = \\033[0;100m\nRed = \\033[0;101m\nGreen = \\033[0;102m\nYellow = \\033[0;103m\nBlue = \\033[0;104m\nPurple = \\033[0;105m\nCyan = \\033[0;106m\nWhite = \\033[0;107m')
+        loading_bar(100)
+        print('Copy finished, paste wherever you want and color the world!!')
+        time.sleep(5)
+        os.system('clear')
+
+    elif block_option == '3':
+        os.system('clear')     
+        
+        
+    elif block_option == '4':
+        print('\n❌ Exiting...')
+        time.sleep(1)
+        os.system('clear')
+        exit()
+    
+    else:
+        os.system('clear')
+        print('Invalid option, returning to High Intensity Backgrounds Colors Menu')
+        spinning_cursor(3)
+        os.system('clear')
 
 os.system('clear')
 
