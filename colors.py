@@ -189,21 +189,21 @@ def regular():
     if block_option == '1':
         color_regular = input('Choose color (lower case): ')
         if color_regular == 'black':     
-            pyperclip.copy('\\033[0;37m')
+            pyperclip.copy('"\\033[0;37m"')
         elif color_regular == 'red':
-            pyperclip.copy('\\033[0;31m')
+            pyperclip.copy('"\\033[0;31m"')
         elif color_regular == ('green'):
-            pyperclip.copy('\\033[0;32m')
+            pyperclip.copy('"\\033[0;32m"')
         elif color_regular == ('yellow'):
-            pyperclip.copy('\\033[0;33m')
+            pyperclip.copy('"\\033[0;33m"')
         elif color_regular == ('blue'):
-            pyperclip.copy('\\033[0;34m')
+            pyperclip.copy('"\\033[0;34m"')
         elif color_regular == ('purple'):
-            pyperclip.copy('\\033[0;35m')
+            pyperclip.copy('"\\033[0;35m"')
         elif color_regular == ('cyan'):
-            pyperclip.copy('\\033[0;36m')
+            pyperclip.copy('"\\033[0;36m"')
         elif color_regular == ('white'):
-            pyperclip.copy('\\033[0;37m')
+            pyperclip.copy('"\\033[0;37m"')
             print('Color White copied to clipboard', end='') 
             dots_progress(3)
         else:
@@ -215,7 +215,7 @@ def regular():
             
     elif block_option == '2':
         print('Copying all colors...')
-        pyperclip.copy('Black = \\033[0;37m\nRed = \\033[0;31m\nGreen = \\033[0;32m\nYellow = \\033[0;33m\nBlue = \\033[0;34m\nPurple = \\033[0;35m\nCyan = \\033[0;36m\nWhite = \\033[0;37m')
+        pyperclip.copy('Black = "\\033[0;37m"\nRed = "\\033[0;31m"\nGreen = "\\033[0;32m"\nYellow = "\\033[0;33m"\nBlue = "\\033[0;34m"\nPurple = "\\033[0;35m"\nCyan = "\\033[0;36m"\nWhite = "\\033[0;37m"')
         loading_bar(100)
         print('Copy finished, paste wherever you want and color the world!!')
         time.sleep(5)
@@ -263,21 +263,21 @@ def bold():
     if block_option == '1':
         color_bold = input('Choose color (lower case): ')
         if color_bold == 'black':     
-            pyperclip.copy('\\033[1;30m')
+            pyperclip.copy('"\\033[1;30m"')
         elif color_bold == 'red':
-            pyperclip.copy('\\033[1;31m')
+            pyperclip.copy('"\\033[1;31m"')
         elif color_bold == ('green'):
-            pyperclip.copy('\\033[1;32m')
+            pyperclip.copy('"\\033[1;32m"')
         elif color_bold == ('yellow'):
-            pyperclip.copy('\\033[1;33m')
+            pyperclip.copy('"\\033[1;33m"')
         elif color_bold == ('blue'):
-            pyperclip.copy('\\033[1;34m')
+            pyperclip.copy('"\\033[1;34m"')
         elif color_bold == ('purple'):
-            pyperclip.copy('\\033[1;35m')
+            pyperclip.copy('"\\033[1;35m"')
         elif color_bold == ('cyan'):
-            pyperclip.copy('\\033[1;36m')
+            pyperclip.copy('"\\033[1;36m"')
         elif color_bold == ('white'):
-            pyperclip.copy('\\033[1;37m')
+            pyperclip.copy('"\\033[1;37m"')
             print('Color White copied to clipboard', end='') 
             dots_progress(3)
         else:
@@ -289,7 +289,7 @@ def bold():
             
     elif block_option == '2':
         print('Copying all colors...')
-        pyperclip.copy('Black = \\033[1;37m\nRed = \\033[1;31m\nGreen = \\033[1;32m\nYellow = \\033[1;33m\nBlue = \\033[1;34m\nPurple = \\033[1;35m\nCyan = \\033[1;36m\nWhite = \\033[1;37m')
+        pyperclip.copy('Black = "\\033[1;37m"\nRed = "\\033[1;31m"\nGreen = "\\033[1;32m"\nYellow = "\\033[1;33m"\nBlue = "\\033[1;34m"\nPurple = "\\033[1;35m"\nCyan = "\\033[1;36m"\nWhite = "\\033[1;37m"')
         loading_bar(100)
         print('Copy finished, paste wherever you want and color the world!!')
         time.sleep(5)
@@ -337,21 +337,21 @@ def underline():
     if block_option == '1':
         color_underline = input('Choose color (lower case): ')
         if color_underline == 'black':     
-            pyperclip.copy('\\033[4;37m')
+            pyperclip.copy('"\\033[4;30m"')
         elif color_underline == 'red':
-            pyperclip.copy('\\033[4;31m')
+            pyperclip.copy('"\\033[4;31m"')
         elif color_underline == ('green'):
-            pyperclip.copy('\\033[4;32m')
+            pyperclip.copy('"\\033[4;32m"')
         elif color_underline == ('yellow'):
-            pyperclip.copy('\\033[4;33m')
+            pyperclip.copy('"\\033[4;33m"')
         elif color_underline == ('blue'):
-            pyperclip.copy('\\033[4;34m')
+            pyperclip.copy('"\\033[4;34m"')
         elif color_underline == ('purple'):
-            pyperclip.copy('\\033[4;35m')
+            pyperclip.copy('"\\033[4;35m"')
         elif color_underline == ('cyan'):
-            pyperclip.copy('\\033[4;36m')
+            pyperclip.copy('"\\033[4;36m"')
         elif color_underline == ('white'):
-            pyperclip.copy('\\033[4;37m')
+            pyperclip.copy('"\\033[4;37m"')
             print('Color White copied to clipboard', end='') 
             dots_progress(3)
         else:
@@ -363,7 +363,7 @@ def underline():
             
     elif block_option == '2':
         print('Copying all colors...')
-        pyperclip.copy('Black = \\033[4;37m\nRed = \\033[4;31m\nGreen = \\033[4;32m\nYellow = \\033[4;33m\nBlue = \\033[4;34m\nPurple = \\033[4;35m\nCyan = \\033[4;36m\nWhite = \\033[4;37m')
+        pyperclip.copy('Black = "\\033[4;30m"\nRed = "\\033[4;31m"\nGreen = "\\033[4;32m"\nYellow = "\\033[4;33m"\nBlue = "\\033[4;34m"\nPurple = "\\033[4;35m"\nCyan = "\\033[4;36m"\nWhite = "\\033[4;37m"')
         loading_bar(100)
         print('Copy finished, paste wherever you want and color the world!!')
         time.sleep(5)
