@@ -402,7 +402,61 @@ def background():
     col_names = ["Color", "Code"]
 
     print(tabulate(data, headers=col_names))
-    print('\n Note: Append always a \ before 033\n')
+    
+    print('Time to color your python code!')
+    block()
+    block_option = input('\nOption: ')
+
+    if block_option == '1':
+        color_background = input('Choose color (lower case): ')
+        if color_background == 'black':     
+            pyperclip.copy('\\033[40m')
+        elif color_background == 'red':
+            pyperclip.copy('\\033[41m')
+        elif color_background == ('green'):
+            pyperclip.copy('\\033[42m')
+        elif color_background == ('yellow'):
+            pyperclip.copy('\\033[43m')
+        elif color_background == ('blue'):
+            pyperclip.copy('\\033[0;34m')
+        elif color_background == ('purple'):
+            pyperclip.copy('\\033[0;35m')
+        elif color_background == ('cyan'):
+            pyperclip.copy('\\033[0;36m')
+        elif color_background == ('white'):
+            pyperclip.copy('\\033[0;37m')
+            print('Color White copied to clipboard', end='') 
+            dots_progress(3)
+        else:
+            os.system('clear')
+            print('Has to be a color | ie: black')
+            spinning_cursor(3)
+            os.system('clear')
+            return regular()
+            
+    elif block_option == '2':
+        print('Copying all colors...')
+        pyperclip.copy('Black = \\033[0;37m\nRed = \\033[0;31m\nGreen = \\033[0;32m\nYellow = \\033[0;33m\nBlue = \\033[0;34m\nPurple = \\033[0;35m\nCyan = \\033[0;36m\nWhite = \\033[0;37m')
+        loading_bar(100)
+        print('Copy finished, paste wherever you want and color the world!!')
+        time.sleep(5)
+        os.system('clear')
+
+    elif block_option == '3':
+        os.system('clear')     
+        
+        
+    elif block_option == '4':
+        print('\n❌ Exiting...')
+        time.sleep(1)
+        os.system('clear')
+        exit()
+    
+    else:
+        os.system('clear')
+        print('Invalid option, returning to Regular Colors Menu')
+        spinning_cursor(3)
+        os.system('clear')
 
 
 def high_intensity():
