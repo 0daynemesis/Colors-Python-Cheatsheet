@@ -11,4 +11,4 @@
 
 - Documentation
 
-        . With a menu, you can choose what color do you pretend to show the color>
+        . With a menu, you can choose what color do you pretend, copy to clipboard the code or the entire scheme of colors.
