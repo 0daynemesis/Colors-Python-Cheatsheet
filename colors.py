@@ -701,8 +701,7 @@ while True:
             regular()
             os.system('clear')
             break
-        #regular()
-        #ret_menu()
+        
     elif option == '2':
         os.system('clear')
         while True:
