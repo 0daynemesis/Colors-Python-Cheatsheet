@@ -236,6 +236,7 @@ def regular():
         print('Invalid option, returning to Regular Colors Menu')
         spinning_cursor(3)
         os.system('clear')
+        return regular()
 
 
 def bold():
@@ -310,6 +311,7 @@ def bold():
         print('Invalid option, returning to Bold Colors Menu')
         spinning_cursor(3)
         os.system('clear')
+        return bold()
 
 
 def underline():
@@ -384,6 +386,7 @@ def underline():
         print('Invalid option, returning to Underline Colors Menu')
         spinning_cursor(3)
         os.system('clear')
+        return underline()
 
 
 def background():
