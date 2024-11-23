@@ -3,6 +3,7 @@ import pyperclip
 import os
 import time
 import sys
+import pyfiglet
 
 # UNDER DEVELOP 
 
@@ -114,6 +115,8 @@ def dots_progress(seconds):
 
 def display_menu():
     print(BYellow + '\nColors Python Codes Cheatsheet' + Color_Off)
+    ascii_art = pyfiglet.figlet_format('Colors Python Cheatsheet', font='slant')
+    print(ascii_art)
     print('🔱 C o d e d   b y   0 d a y n e m e s i s 🇵🇹 🔱')
     print('\n🔴🟠🟡🟢🔵🟣🟤⚫⚪')
     print('\nMain Menu:')
@@ -290,7 +293,7 @@ def bold():
             
     elif block_option == '2':
         print('Copying all colors...')
-        pyperclip.copy('Black = "\\033[1;37m"\nRed = "\\033[1;31m"\nGreen = "\\033[1;32m"\nYellow = "\\033[1;33m"\nBlue = "\\033[1;34m"\nPurple = "\\033[1;35m"\nCyan = "\\033[1;36m"\nWhite = "\\033[1;37m"')
+        pyperclip.copy('BBlack = "\\033[1;37m"\nBRed = "\\033[1;31m"\nBGreen = "\\033[1;32m"\nBYellow = "\\033[1;33m"\nBBlue = "\\033[1;34m"\nBPurple = "\\033[1;35m"\nBCyan = "\\033[1;36m"\nBWhite = "\\033[1;37m"')
         loading_bar(100)
         print('Copy finished, paste wherever you want and color the world!!')
         time.sleep(5)
@@ -365,7 +368,7 @@ def underline():
             
     elif block_option == '2':
         print('Copying all colors...')
-        pyperclip.copy('Black = "\\033[4;30m"\nRed = "\\033[4;31m"\nGreen = "\\033[4;32m"\nYellow = "\\033[4;33m"\nBlue = "\\033[4;34m"\nPurple = "\\033[4;35m"\nCyan = "\\033[4;36m"\nWhite = "\\033[4;37m"')
+        pyperclip.copy('UBlack = "\\033[4;30m"\nURed = "\\033[4;31m"\nUGreen = "\\033[4;32m"\nUYellow = "\\033[4;33m"\nUBlue = "\\033[4;34m"\nUPurple = "\\033[4;35m"\nUCyan = "\\033[4;36m"\nUWhite = "\\033[4;37m"')
         loading_bar(100)
         print('Copy finished, paste wherever you want and color the world!!')
         time.sleep(5)
@@ -440,7 +443,7 @@ def background():
             
     elif block_option == '2':
         print('Copying all colors...')
-        pyperclip.copy('Black = \\033[40m\nRed = \\033[41m\nGreen = \\033[42m\nYellow = \\033[43m\nBlue = \\033[44m\nPurple = \\033[45m\nCyan = \\033[46m\nWhite = \\033[47m')
+        pyperclip.copy('OnBlack = "\\033[40m"\nOnRed = "\\033[41m"\nOnGreen = "\\033[42m"\nOnYellow = "\\033[43m"\nOnBlue = "\\033[44m"\nOnPurple = "\\033[45m"\nOnCyan = "\\033[46m"\nOnWhite = "\\033[47m"')
         loading_bar(100)
         print('Copy finished, paste wherever you want and color the world!!')
         time.sleep(5)
